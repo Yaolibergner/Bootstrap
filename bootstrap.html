@@ -18,6 +18,7 @@
 <body>
 
 <!-- Code goes here. -->
+
 <!-- NAVBAR CODE -->
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ABC368;">
   <a class="navbar-brand" href="#">UberMelon</a>
@@ -39,28 +40,69 @@
     </ul>
     <ul class="navbar-nav">
     	<li class="nav-item">
-        <a class="nav-link" href="#">Login</a>
+		<!--IF YOU DON'T WANT MODAL LOGIN <a class="nav-link" href="#">Login</a> -->
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login">Login</button>
       </li>
-      <li class="nav-item">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Options
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Favorite Melons</a>
+          <a class="dropdown-item" href="#">Profile</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Settings</a>
+        </div>
+      </li>
+      <!-- <li class="nav-item">
         <a class="nav-link" href="#">Favorite Melons</a>
-      </li>
-      <li class="nav-item">
+      </li> -->
+      <!-- <li class="nav-item">
         <a class="nav-link" href="#">Settings</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Profile</a>
-      </li>
+      </li> -->
   	</ul>
+  	<form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
   </div>
 </nav>
+
+<!-- Login Modal -->
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Yao and Janet say hello! :)
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Log in</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <!-- Photo + main text -->
 <div class="container">
 	<div class="row">
 		<div class="col">
-			<div class="text-center"><img src="happyeatingmelon.jpeg" class="rounded">
-			<!-- <div class="mx-auto" style="width: 600px;"><img src="/src/bootstrap"> -->
-				<br><br>We deliver only the highest quality domestic and exotic melons from local, independent farmers from around the world. <br>Our melons are delivered quickly with the greatest care. We guarantee every order, every time.<br><br>
-			</div>
+			<br>
+			<img class="rounded mx-auto d-block" src="happyeatingmelon.jpeg" class="rounded">
+			<p class="text-center">
+				<br><br>We deliver only the highest quality domestic and exotic melons from local, independent farmers from around the world. Our melons are delivered quickly with the greatest care. We guarantee every order, every time.<br><br>
+			</p>
 		</div>
 	<div class="row">
 		<div class="col text-center">
@@ -75,7 +117,9 @@
 	</div>	
 </div>
 <br><br>
-<div class="container"><div class="d-none d-md-block d-lg-block d-xl-none">
+
+<!-- Table with melon info, visible only on md/lg devices -->
+<div class="container d-none d-md-block d-lg-block d-xl-none">
 	<table class="table table-striped">
 	  <thead>
 	    <tr>
@@ -107,13 +151,6 @@
 	  </tbody>
 	</table>
 </div>
-
-
-
-
-
-
-
 
 
 <!-- You need this in order to use JS-based components in the 
